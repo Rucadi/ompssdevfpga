@@ -4,7 +4,7 @@ metadata:
   name: MyDevfile
 projects:
   -
-    name: cpp-hello-world
+    name: cpp-fpga-project
     source:
       type: git
       location: 'https://github.com/Rucadi/ompssdevfpga'
