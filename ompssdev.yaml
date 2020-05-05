@@ -1,0 +1,18 @@
+metadata:
+  name: MyDevfile
+components:
+  - mountSources: true
+    command:
+      - sleep
+      - infinity
+    memoryLimit: 512Mi
+    type: dockerimage
+    volumes:
+      - name: bsctools
+        containerPath: /.bsctools
+    image: rucadi/che
+    env:
+      - value: >-
+          /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/arm64/mcxx/bin
+        name: PATH
+apiVersion: 1.0.0
