@@ -6,8 +6,8 @@ projects:
   -
     name: cpp-hello-world
     source:
-     type: git
-     location: 'https://github.com/Rucadi/ompssdevfpga'
+      type: git
+      location: 'https://github.com/Rucadi/ompssdevfpga'
 components:
   - mountSources: true
     command:
