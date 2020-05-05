@@ -1,5 +1,11 @@
 metadata:
   name: MyDevfile
+projects:
+  -
+    name: cpp-hello-world
+    source:
+    type: git
+    location: 'https://github.com/Rucadi/ompssdevfpga'
 components:
   - mountSources: true
     command:
@@ -13,6 +19,6 @@ components:
     image: rucadi/che
     env:
       - value: >-
-          /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/arm64/mcxx/bin
+          /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/arm64/mcxx/bin:/opt/arm/mcxx/bin:/opt/arm64/ait
         name: PATH
 apiVersion: 1.0.0
