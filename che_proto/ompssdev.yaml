@@ -12,9 +12,6 @@ components:
       - infinity
     memoryLimit: 512Mi
     type: dockerimage
-    volumes:
-      - name: bsctools
-        containerPath: /tools
     image: rucadi/che
     env:
       - value: >-
