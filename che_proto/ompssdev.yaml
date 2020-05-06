@@ -1,13 +1,10 @@
-apiVersion: 1.0.0
-
 metadata:
-  name: MyDevfile
+  name: ompssatfpga
 projects:
-  -
-    name: cpp-fpga-project
+  - name: cpp-fpga-project
     source:
-      type: git
       location: 'https://github.com/Rucadi/ompssdevfpga'
+      type: git
 components:
   - mountSources: true
     command:
@@ -17,9 +14,12 @@ components:
     type: dockerimage
     volumes:
       - name: bsctools
-        containerPath: /.bsctools
+        containerPath: /tools
     image: rucadi/che
     env:
       - value: >-
           /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/opt/arm64/mcxx/bin:/opt/arm/mcxx/bin:/opt/arm64/ait
         name: PATH
+      - value: aarch64-linux-gnu-
+        name: CROSS_COMPILE
+apiVersion: 1.0.0
